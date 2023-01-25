@@ -13,38 +13,44 @@
                         </div>
                         <!-- Form register -->
                         <form class="user" method="post" action="<?= base_url('auth/registration'); ?>">
+                            <!-- Full Name -->
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Full Name" value="<?= set_value('name') ?>">
                                 <!-- Form Error Validation -->
                                 <?= form_error('name', '<small class="text-danger">', '</small>');?>
                             </div>
+                            <!-- Email -->
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Email Address" value="<?= set_value('email') ?>">
                                 <!-- Form Error Validation -->
                                 <?= form_error('email', '<small class="text-danger">', '</small>');?>
                             </div>
                             <div class="form-group row">
+                                <!-- Password 1 -->
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" class="form-control form-control-user" id="password1" name="password1" placeholder="Password">
                                     <!-- Form Error Validation -->
                                     <?= form_error('password1', '<small class="text-danger">', '</small>');?>
                                 </div>
+                                <!-- Password 2 -->
                                 <div class="col-sm-6">
                                     <input type="password" class="form-control form-control-user" id="password2" name="password2" placeholder="Repeat Password">
                                 </div>
+                            </div>
+                            <!-- Account type -->
+                            <div class="form-group">
+                                <select class="form-control" name="role_id" id="role_id" style="border-radius: 25px;">
+                                    <option>-- Select account type --</option>
+                                    <hr>
+                                    <option value="2">Employe</option>
+                                    <option value="3">Jobsecker</option>
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-primary btn-user btn-block">
                                 Register Account
                                 <i class="fas fa-fw fa-arrow-right"></i>
                             </button>
-                            <!-- Gunakan bila dibutuhkan -->
-                            <!-- <hr>
-                            <a href="index.html" class="btn btn-google btn-user btn-block">
-                                <i class="fab fa-google fa-fw"></i> Register with Google
-                            </a>
-                            <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                            </a> -->
+                            
                         </form>
                         <hr>
                         <div class="text-center">
