@@ -19,10 +19,26 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin') ?>">
+                <a class="nav-link" href="<?= base_url('admin'); ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('admin/employe'); ?>">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Employe</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('admin/jobseeker'); ?>">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Jobseeker</span></a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="< ?= base_url('admin/company'); ?>">
+                    <i class="fas fa-fw fa-building"></i>
+                    <span>Company</span></a>
+            </li> -->
 
             <!-- Divider -->
             <hr class="sidebar-divider">
