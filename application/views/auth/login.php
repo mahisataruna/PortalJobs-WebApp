@@ -17,18 +17,18 @@
                                     </div>
                                     <form class="user" accept-charset="utf-8" method="post" action="<?= base_url('auth'); ?>">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">
+                                            <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Enter Email Address..." value="<?= set_value('email'); ?>">
+                                            <?= form_error('email', '<small class="text-danger">', '</small>');?>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                            <input type="password" class="form-control form-control-user" id="password1" name="password1" placeholder="Password">
+                                            <?= form_error('password', '<small class="text-danger">', '</small>');?>
                                         </div>
                                         
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            Login <i class="fas fa-fw fa-solid fa-arrow-right"></i>
-                                        </a>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                            <i class="fas fa-fw fa-arrow-right"></i>
+                                        </button>
                                         <hr>
                                         <a href="index.html" class="btn btn-danger btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Login with Google
