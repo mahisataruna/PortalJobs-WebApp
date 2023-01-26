@@ -34,11 +34,11 @@
                     <i class="fas fa-fw fa-user"></i>
                     <span>Jobseeker</span></a>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="< ?= base_url('admin/company'); ?>">
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('admin/company'); ?>">
                     <i class="fas fa-fw fa-building"></i>
                     <span>Company</span></a>
-            </li> -->
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">

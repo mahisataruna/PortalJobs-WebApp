@@ -53,6 +53,75 @@
     <!-- Custom scripts for all pages-->
     <script src="<?= base_url('assets/') ?>js/sb-admin-2.min.js"></script>
 
+    <!-- Page level plugins -->
+    <script src="<?= base_url('assets/'); ?>vendor/chart.js/Chart.min.js"></script>
+
+
+    <!-- Script datatable -->
+    <script src="<?= base_url('assets/'); ?>vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/demo/datatables-demo.js"></script>
+
+    <!-- userchart -->
+    <script>
+        Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+        Chart.defaults.global.defaultFontColor = '#858796';
+        var ctx = document.getElementById("userPieChart");
+        var userPieChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+        labels: ["Employe", "Company", "Jobseeker"],
+        datasets: [{
+            data: [ 
+            <?php
+            include 'con.php';
+            
+            $jml_em = mysqli_query($koneksi, "SELECT * FROM user WHERE role_id=1");
+            while($data1 = mysqli_fetch_array($jml_em)){
+                echo $data1['id'];
+            }
+            ?>,
+            <?php
+            include 'con.php';
+            
+            $jml_cm = mysqli_query($koneksi, "SELECT * FROM user WHERE role_id=2");
+            while($data2 = mysqli_fetch_array($jml_cm)){
+                echo $data2['id'];
+            }
+            ?>,
+            <?php
+            include 'con.php';
+            
+            $jml_js = mysqli_query($koneksi, "SELECT * FROM user WHERE role_id LIKE 3");
+            while($data3 = mysqli_fetch_array($jml_js)){
+                echo $data3['role_id'];
+            }
+            ?>],
+            backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
+            hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+            hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+                tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+                },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+    </script>
+
 </body>
 
 </html>

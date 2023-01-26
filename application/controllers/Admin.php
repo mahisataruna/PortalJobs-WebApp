@@ -42,4 +42,17 @@ class Admin extends CI_Controller
         $this->load->view('admin/jobseeker', $data);
         $this->load->view('templates/footer');
     }
+    // Company
+    public function company()
+    {
+        $data['title']  = 'Company';
+        $data['user'] = $this->db->get_where('user', ['email' => 
+        $this->session->userdata('email')])->row_array();
+        // Tampil 
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('admin/company', $data);
+        $this->load->view('templates/footer');
+    }
 }
