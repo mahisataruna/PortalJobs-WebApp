@@ -51,8 +51,9 @@
                                             <i class="fas fa-fw fa-solid fa-check fa-sm text-primary"></i>
                                         </td>
                                         <td width="4%" style="text-align: center;">
-											<a href="" onclick="return confirm('See detail account?')" class="btn btn-sm btn-info"><i class="fas fa-fw fa-solid fa-eye fa-sm"></i> Details</a>
-										</td>
+											<a href="" onclick="return confirm('See detail account?')" class="btn btn-circle btn-sm btn-info"><i class="fas fa-fw fa-solid fa-eye fa-sm"></i></a>
+                                            <a href="" onclick="return confirm('See detail account?')" class="btn btn-circle btn-sm btn-danger"><i class="fas fa-fw fa-solid fa-trash fa-sm"></i></a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -7070,6 +7070,25 @@ a.close.disabled {
     vertical-align: text-top !important;
 }
 
+/* New bg */
+.bg-blue {
+    background-color: #20236c !important;
+}
+
+.bg-bluesky {
+    background-color: #0a8792 !important;
+}
+
+.bg-maroon {
+    background-color: #592251 !important;
+}
+
+.bg-orange {
+    background-color: #ff842b !important;
+}
+
+/* End */
+
 .bg-primary {
     background-color: #4e73df !important;
 }
@@ -11165,8 +11184,8 @@ a:focus {
 }
 
 .bg-gradient-lemon {
-    background-color: #f4f269;
-    background-image: linear-gradient(120deg, #f4f269 10%, #5cb270 100%);
+    background-color: #fccd12;
+    background-image: linear-gradient(120deg, #fccd12 10%, #5cb270 100%);
     background-size: cover;
 }
 
